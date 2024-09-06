@@ -29,7 +29,7 @@ jobs:
 
       - name: Save version info
         run: |
-          git describe --tags > VERSION && apt install python3 python3-pip
+          git describe --tags > VERSION && sudo apt install python3 python3-pip
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
