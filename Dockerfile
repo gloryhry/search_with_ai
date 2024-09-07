@@ -13,6 +13,9 @@ RUN yarn install && yarn run build
 FROM node:20-alpine
 WORKDIR /app
 
+# Install Python
+RUN apk add --no-cache python3 make g++
+
 # Install dotenvx
 RUN curl -fsS https://dotenvx.sh/ | sh
 
